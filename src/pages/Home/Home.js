@@ -4,24 +4,28 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import "./Home.css";
+import { useCategory } from "../../context";
 
 export const Home = () => {
   const [hasMore, setHasMore] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(16);
   const [testData, setTestData] = useState([]);
   const [hotels, setHotels] = useState([]);
+  const { hotelCategory } = useCategory();
 
   useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios.get("http://localhost:3500/api/hotels");
+        const { data } = await axios.get(
+          `http://localhost:3500/api/hotels?category=${hotelCategory}`
+        );
         setTestData(data);
         setHotels(data ? data.slice(0, 16) : []);
       } catch (err) {
         console.log(err);
       }
     })();
-  }, []);
+  }, [hotelCategory]);
 
   const fetchMoreData = () => {
     if (hotels.length >= testData.length) {

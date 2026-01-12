@@ -1,6 +1,7 @@
 .categories {
   padding: 6rem 2rem 1rem 2rem;
   color: var(--text-color-primary);
+  background-color: var(--background-color);
   position: fixed;
   z-index: 1;
   width: 100vw;
@@ -26,4 +27,8 @@
 
 .btn-right {
   right: 7rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--text-color-primary);
 }
