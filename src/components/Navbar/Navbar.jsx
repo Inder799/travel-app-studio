@@ -14,17 +14,16 @@ export const Navbar = () => {
         <span className="form-option">Any Week</span>
         <span className="border-right-1px"></span>
         <span className="form-option">Any Guests</span>
-        <nav className="d-flex align-center gap-large">
-          <div className="nav d-flex align-center cursor-pointer">
-            <span class="material-icons-outlined profile-option menu">
-              menu
-            </span>
-            <span class="material-icons-outlined profile-option person">
-              person
-            </span>
-          </div>
-        </nav>
+        <span class="material-icons-outlined search">search</span>
       </div>
+      <nav className="d-flex align-center gap-large">
+        <div className="nav d-flex align-center cursor-pointer">
+          <span class="material-icons-outlined profile-option menu">menu</span>
+          <span class="material-icons-outlined profile-option person">
+            person
+          </span>
+        </div>
+      </nav>
     </header>
   );
 };

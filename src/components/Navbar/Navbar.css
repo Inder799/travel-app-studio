@@ -40,3 +40,28 @@
 .cursor-pointer:hover {
   cursor: pointer;
 }
+
+.form-container {
+  background-color: #fff;
+  height: 2.74rem;
+  border-radius: 4px;
+}
+
+.form-option {
+  font-size: 0.875rem;
+  padding: 8px;
+  color: var(--text-color-primary);
+}
+
+.border-right-1px {
+  border-right: 1px solid var(--accent-color);
+  height: 70%;
+}
+
+.search {
+  background-color: var(--primary-color);
+  height: 100%;
+  padding: 8px;
+  font-size: 1.875rem;
+  border-radius: 0 4px 4px 0;
+}

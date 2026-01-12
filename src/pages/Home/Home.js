@@ -1,5 +1,14 @@
-import { Navbar } from "../../components/Navbar/Navbar";
+import { Fragment } from "react/jsx-runtime";
+import { HotelCard, Navbar } from "../../components";
+import "./Home.css";
 
 export const Home = () => {
-  return <Navbar />;
+  return (
+    <Fragment>
+      <Navbar />
+      <main className="main">
+        <HotelCard />
+      </main>
+    </Fragment>
+  );
 };
