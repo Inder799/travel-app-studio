@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import { HotelCard, Navbar } from "../../components";
+import { HotelCard, Navbar, Categories } from "../../components";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -43,6 +43,7 @@ export const Home = () => {
   return (
     <Fragment>
       <Navbar />
+      <Categories />
       {hotels && hotels.length > 0 ? (
         <InfiniteScroll
           dataLength={hotels.length}
